@@ -95,4 +95,19 @@ $(document).ready(() => {
         }
     })
 
+    // accordion functionality
+    var num = 0;
+    $('.special h3').each(function(i, acc) {
+        $(this).click(e => {
+
+            $('.special li div').each((index, li) => {
+                    if(index == num) {
+                        $(li).slideUp();
+                    }
+            });
+            $(this).parent().find('div').slideDown()
+            num = i;
+        })
+    })
+
 })
