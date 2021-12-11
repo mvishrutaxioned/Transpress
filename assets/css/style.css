@@ -609,6 +609,74 @@ nav .wrapper {
 
 /* about styling ends here */
 
+/* counter styling starts here */
+
+
+.counter {
+  margin-right: auto;
+  background: #333;
+}
+
+.counter .wrapper { width: 78%; }
+
+.counter ul {
+  padding: 75px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.counter ul li span { font-size: 0; }
+
+.counter ul li h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 34px;
+}
+
+.counter ul li:nth-of-type(2) h2 { padding-top: 5px; }
+.counter ul li:nth-of-type(3) h2 { padding-top: 15px; }
+.counter ul li:nth-of-type(4) h2 { padding-top: 15px; }
+
+.counter ul li p {
+  margin-top: 20px;
+  color: #a6bbbb;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: .4px;
+}
+
+.counter ul li span::after {
+  color: #32af96;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+}
+
+.counter ul li span.dice::after {
+  content: '\f1b3';
+  font-size: 55px;
+}
+
+.counter ul li span.users::after {
+  content: '\f0c0';
+  font-size: 50px;
+}
+
+.counter ul li span.thumb::after {
+  content: '\f164';
+  font-size: 40px;
+}
+
+.counter ul li span.smile::after {
+  content: '\f118';
+  font-size: 40px;
+}
+
+/* counter styling ends here */
 
 
 
