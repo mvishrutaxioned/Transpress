@@ -7,7 +7,27 @@ $(document).ready(() => {
     var abHeight = $('.about').height();
     var callCounter = $(document).height() - (topHeight + bannerHeight + serHeight + abHeight);
 
-
+    // counter functionality
+    function counter() {
+        $('.count').each(function() {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+          
+            $({ countNum: $this.text()}).animate({
+              countNum: countTo
+            },
+            {
+              duration: 2800,
+              easing:'linear',
+              step: function() {
+                $this.text(Math.floor(this.countNum));
+              },
+              complete: function() {
+                $this.text(this.countNum);
+              }
+            });
+        });
+    }
 
     // responsive navbar functionality
     $('#menu').click(e => {
@@ -67,5 +87,12 @@ $(document).ready(() => {
             }
         })
     }
+
+    // on scroll call counter
+    $(document).scroll(function() {
+        if($(document).scrollTop() >= callCounter) {
+            counter();
+        }
+    })
 
 })
