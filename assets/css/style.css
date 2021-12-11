@@ -420,6 +420,105 @@ nav .wrapper {
 .banner-items li span.airfreight::before { content: '\f072'; }
 .banner-items li span.contract::before { content: '\f0d1'; }
 
+/* services styling starts here */
+
+.services {
+  padding: 52px 0;
+  margin: 52px auto;
+}
+
+.info h2,
+.services h2,
+.about-info h2 {
+  margin: 0 auto;
+  position: relative;
+  color: #666;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.about-info h2::after,
+.services h2::after {
+  content: '';
+  width: 35px;
+  height: 4px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  left: 0;
+  background: #32af96;
+}
+
+.services ul {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 370px 20px 370px 20px 370px;
+  grid-template-columns: repeat(3, 370px);
+  grid-gap: 20px;
+}
+
+.services ul li {
+  padding: 25px 15px;
+  border: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.services ul li h3 { font-weight: 600; }
+
+.services ul li p {
+  margin-top: 12px;
+  color: #666;
+  font-size: 15px;
+}
+
+.services ul li span { width: 25%; }
+.services ul li div { width: 75%; }
+
+.services ul li span::before {
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  background: #eee;
+  color: #000;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  font-size: 16px;
+}
+
+.services ul li span.files::before {
+  content: '\f1c0';
+  padding: 10px 13px;
+  font-size: 19px;
+}
+
+.services ul li span.car::before {
+  content: '\f1b9';
+  padding: 8px 11px;
+  font-size: 23px;
+}
+
+.services ul li span.ware::before {
+  content: '\f275';
+  padding: 10px 11px;
+  font-size: 22px;
+}
+
+.services ul li span.world::before {
+  content: '\f57d';
+  padding: 11px 12px;
+  font-size: 16px;
+}
+
+/* services styling ends here */
 
 
 
