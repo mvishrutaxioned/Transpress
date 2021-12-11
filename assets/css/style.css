@@ -678,6 +678,184 @@ nav .wrapper {
 
 /* counter styling ends here */
 
+/* info styling starts here */
+
+.info .wrapper {
+  width: 86%;
+  padding: 55px 0;
+  margin: 55px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.info .special,
+.info .news { width: 47.5%; }
+
+.special h2,
+.info h2 {
+  margin-bottom: 30px;;
+  color: #000;
+  text-align: left;
+}
+
+.special ul {
+  width: 100%;
+  border: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.special ul li:first-child h3 { border-bottom: 1px solid #eee; }
+.special ul li:last-child h3 { border-bottom: none; }
+
+.news ul li h3,
+.special ul li h3 {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: .3px;
+}
+
+.special ul li h3 {
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.special ul li h3:hover { color: #a6bbbb; }
+
+.special ul li div {
+  width: 100%;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  display: none;
+  color: #666;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: .3px;
+  overflow: hidden;
+}
+
+.special ul li:first-child div { display: block; }
+
+.acc,
+.right,
+.news ul li div small .tick {
+  width: 12%;
+  height: 100%;
+  padding: 22px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: #f9f9f9;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.news ul li div small .tick::before,
+.acc::after,
+.right::after {
+  content: '\f061';
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #bbb;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  text-indent: 0;
+}
+
+.acc {
+  padding: 0;
+  background: #fff;
+}
+
+.acc::after { font-size: 26px; }
+.acc.ship::after { content: '\f21a'; }
+.acc.plane::after { content: '\f072'; }
+.acc.truky::after { content: '\f0d1'; }
+.acc.earth::after { content: '\f57d'; }
+
+.news ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 25px 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.news ul li div {
+  padding: 20px;
+  border: 1px solid #eee;
+}
+
+.news ul li div h3 {
+  margin-bottom: 14px;
+  border: none;
+}
+
+.news ul li div p,
+.news ul li div small {
+  font-size: 15px;
+  color: #666;
+  line-height: 22px;
+}
+
+.news ul li div p { margin: 14px auto; }
+
+.news ul li div a .right {
+  padding: 0;
+  margin-left: 5px;
+}
+
+.news ul li div a .right::after {
+  background: #fff;
+  color: #666;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.news ul li div a:hover,
+.news ul li div a:hover .right::after { color: #a6bbbb; }
+
+.news ul li div a {
+  color: #666;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: .5px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.news ul li div small .tick {
+  padding: 0;
+  background: #fff;
+}
+
+.news ul li div small .tick::before {
+  content: '\f017';
+  color: #32af96;
+}
+
+/* info styling ends here */
+
 
 
 /*=================================
