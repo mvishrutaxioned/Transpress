@@ -7,4 +7,16 @@ $(document).ready(() => {
     var abHeight = $('.about').height();
     var callCounter = $(document).height() - (topHeight + bannerHeight + serHeight + abHeight);
 
+
+
+    // responsive navbar functionality
+    $('#menu').click(e => {
+        e.preventDefault();
+        var docScroll = $(document).scrollTop();
+
+        $('.navbar').css({"top":`${topHeight - docScroll}px`});
+        $('.navbar').toggleClass('showNav');
+        $('html, body').toggleClass('hidden');
+    })
+
 })
