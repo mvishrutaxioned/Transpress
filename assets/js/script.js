@@ -19,4 +19,22 @@ $(document).ready(() => {
         $('html, body').toggleClass('hidden');
     })
 
+    // hide and show toggle btn functioanality
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > topHeight) {
+            $('#toggleBtn').fadeIn();
+            $('#toggleBtn').addClass('flex');
+        } else {
+            $('#toggleBtn').fadeOut();
+            $('#toggleBtn').removeClass('flex');
+        }
+    });
+
+    // on toggleBtn click functionality
+    $('#toggleBtn').click(e => {
+        e.preventDefault();
+        window.scroll({top: 0, behavior: "smooth"});
+    })
+
+
 })
