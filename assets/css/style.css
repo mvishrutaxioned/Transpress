@@ -218,7 +218,110 @@ header { width: 100%; }
 .about-info a:hover { background: #268673 }
 /* head styling ends here */
 
+/* nav styling starts here */
 
+nav { background: #101010 }
+
+nav .wrapper {
+  padding: 22px 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#menu { display: none; }
+.navbar { margin-left: 10px; }
+.navbar li {position: relative;}
+
+.list {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 30px;
+  background: #303030;
+  z-index: 20;
+}
+
+.navbar li ul li {
+  padding: 10px 20px;
+  margin: 5px auto;
+}
+
+.navbar li ul li a {
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.navbar li a:hover .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar li a:hover,
+.navbar li a:hover span::before,
+.nav-links a:hover { color: #268673 }
+.navbar li { margin-right: 45px; }
+.navbar li a.active,
+.navbar li a.active span::before { color: #32af96; }
+
+.navbar li a,
+.nav-links a  {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.navbar li span { font-size: 0; }
+
+.navbar li span::before {
+  content: '\f0dd';
+  top: -5px;
+  padding-left: 8px;
+  color: #fff;
+  font-size: 16px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-links a span.cart::before,
+.nav-links a span.search::before { font-size: 18px; }
+
+.nav-links a span.cart::before {
+  content: '\f290';
+  right: 38px;
+}
+
+.nav-links a span.search::before {
+  content: '\f002';
+  right: 2px;
+}
+
+/* nav styling ends here */
 
 /*=================================
   Header styling ends here
