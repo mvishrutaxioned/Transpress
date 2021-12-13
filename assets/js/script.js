@@ -60,7 +60,6 @@ $(document).ready(() => {
     function closeVid(e) {
         e.preventDefault()
         $('.video').addClass('none')
-        $('video').get(0).pause();
         $('video').get(0).currentTime = 0;
         $('html, body').removeClass('hidden')
     }
@@ -70,13 +69,12 @@ $(document).ready(() => {
         e.preventDefault()
 
         $('.video').removeClass('none');
+        $('.video').trigger('play');
         $('html, body').addClass('hidden')
     })
 
     // close video on click
-    $('#closeVid').click(e => {
-        closeVid(e)
-    })
+    $('#closeVid').click(e => { closeVid(e) })
 
     // close video on clicking outside
     if($('.video').hasClass('none') == true) {
@@ -99,13 +97,15 @@ $(document).ready(() => {
     var num = 0;
     $('.special h3').each(function(i, acc) {
         $(this).click(e => {
+            var elem = $(this).parent().find('div');
 
-            $('.special li div').each((index, li) => {
-                    if(index == num) {
-                        $(li).slideUp();
-                    }
-            });
-            $(this).parent().find('div').slideDown()
+            if(num == i) {
+                elem.slideToggle();
+            } else if (num != i) {
+                $(`.special li:eq(${num}) div`).slideUp();
+                elem.slideDown();
+            }
+
             num = i;
         })
     })
