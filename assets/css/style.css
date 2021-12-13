@@ -249,19 +249,22 @@ nav .wrapper {
 .navbar li {position: relative;}
 
 .list {
+  width: auto;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   position: absolute;
-  top: 30px;
+  top: 20px;
   background: #303030;
+  text-align: center;
   z-index: 20;
 }
 
-.navbar li ul li {
-  padding: 10px 20px;
+.list li {
+  width: 100%;
+  padding: 10px;
   margin: 5px auto;
 }
 
@@ -277,7 +280,7 @@ nav .wrapper {
 .navbar li a.active,
 .navbar li a.active span::before { color: #32af96; }
 
-.navbar li a:hover ul.list {
+.navbar li:hover .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1074,6 +1077,7 @@ video {
 @media only screen and (max-width: 768px) {
 
   nav {
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1113,7 +1117,8 @@ video {
     -webkit-transition: 1s ease;
     -o-transition: 1s ease;
     transition: 1s ease;
-    z-index: 10;
+    overflow: scroll;
+    z-index: 30;
   }
 
   .showNav {
@@ -1122,12 +1127,41 @@ video {
     transform: translateY(0);
   }
 
+  .navbar li a:hover,
+  .navbar li a:hover span::before { color: #fff; }
+  .navbar li a.active,
+  .navbar li a.active span::before { color: #fff; }
+  .navbar li { position: static; }
+
+  .list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: static;
+    display: none;
+    z-index: 40;
+    transition: .5s ease;
+  }
+
+  .list li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color :#a6bbbb;
+  }
+
+  .list li a {
+    width: 100%;
+    padding: 7px 30px;
+    margin: 0;
+  }
+
   .navbar > li {
     width: 60%;
     text-align: center;
   }
 
-  .navbar > li a {
+  .navbar > li > a {
     width: 100%;
     padding: 10px 30px;
     border-bottom: 1px solid #000;
